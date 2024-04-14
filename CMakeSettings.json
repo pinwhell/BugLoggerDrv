@@ -1,0 +1,23 @@
+﻿{
+  "configurations": [
+    {
+      "name": "x64-Debug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "inheritEnvironments": [ "msvc_x64", "linux_x86" ],
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": ""
+    },
+    {
+      "name": "Release_x86_64",
+      "cacheRoot": "C:/Users/Wing/Documents/C++/BugLoggerDrv/build/Release_x86_64",
+      "inheritEnvironments": [],
+      "cacheGenerationCommand": "android-cmake-cfg Release x86_64",
+      "inheritEnvironments": [ "linux_x86" ]
+
+    }
+  ]
+}
