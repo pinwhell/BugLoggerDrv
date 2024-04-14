@@ -1,0 +1,3 @@
+[submodule "vendor/VBXIDrvSDK"]
+	path = vendor/VBXIDrvSDK
+	url = https://github.com/pinwhell/VBXIDrvSDK
