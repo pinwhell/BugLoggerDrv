@@ -3,14 +3,13 @@
 #include <Kernel/PtRegs.h>
 #include <Kernel/Memory.h>
 
-
 #define EBUL_NOTFOUND ~uintptr_t(0x0)
 
 uintptr_t ELFBaseUpwardsLookup(uintptr_t startAt, size_t maxUppwardLookup = 0xF00000)
 {
 	const uintptr_t upperEdge = startAt - maxUppwardLookup;
 
-	for (uintptr_t i = startAt; i >= upperEdge; i--)
+	for (uintptr_t i = startAt; i && i >= upperEdge; i--)
 	{
 		constexpr uint32_t elfMagic = 0x464c457f; // 7F 45 4C 46;
 
@@ -35,7 +34,7 @@ void KERN_CALL hLogIp(struct pt_regs* regs, const char* loglvl)
 	uintptr_t instDisp = regs->ip - elfBase;
 
 	KLOG_PRINT("Module Base %llx", elfBase);
-	KLOG_PRINT("IP %llx:%llx+%llx", regs->ip, elfBase, instDisp);
+	KLOG_PRINT("IP 0x%llx:0x%llx+0x%llx", regs->ip, elfBase, instDisp);
 }
 
 void DriverHooksInstall()
