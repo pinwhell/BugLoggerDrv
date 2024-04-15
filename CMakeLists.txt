@@ -4,7 +4,7 @@ project(BugLoggerDrv)
 
 include_directories(include)
 
-add_compile_options(-O0)
+add_compile_options(-O3)
 
 add_subdirectory(vendor)
 add_subdirectory(src)

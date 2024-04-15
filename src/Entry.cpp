@@ -53,8 +53,6 @@ bool DriverMain(unsigned long entryPoint)
 
 void DriverShootdown()
 {
-	*(int*)0 = 0;
-
 	DriverHooksUninstall();
 	DriverShowUnloaded();
 	PanicOnUpsEnable();
