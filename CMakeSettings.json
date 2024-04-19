@@ -14,10 +14,14 @@
     {
       "name": "Release_x86_64",
       "cacheRoot": "C:/Users/Wing/Documents/C++/BugLoggerDrv/build/Release_x86_64",
-      "inheritEnvironments": [],
-      "cacheGenerationCommand": "android-cmake-cfg Release x86_64",
-      "inheritEnvironments": [ "linux_x86" ]
-
+      "inheritEnvironments": [ "linux_x86" ],
+      "cacheGenerationCommand": "android-cmake-cfg Release x86_64"
+    },
+    {
+      "name": "Release_x86",
+      "cacheRoot": "C:/Users/Wing/Documents/C++/BugLoggerDrv/build/Release_x86",
+      "inheritEnvironments": [ "linux_x86" ],
+      "cacheGenerationCommand": "android-cmake-cfg Release x86"
     }
   ]
 }

@@ -43,7 +43,7 @@ void DriverShowUnloaded()
 	printk(KERN_INFO "");
 }
 
-bool DriverMain(unsigned long entryPoint)
+bool DriverMain(uintptr_t entryPoint)
 {
 	PanicOnUpsDisable();
 	DriverShowLoaded();
